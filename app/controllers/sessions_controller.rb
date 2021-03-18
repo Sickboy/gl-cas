@@ -100,17 +100,20 @@ class SessionsController < ApplicationController
   # GET /users/logout
   def destroy
     logout
-    redirect_to root_path
+    #redirect_to root_path
+    redirect_to ENV['CAS_LOGOUT']
   end
 
   # GET/POST /auth/:provider/callback
   def omniauth
     @auth = request.env['omniauth.auth']
+     # puts request.env['omniauth.auth']
 
     begin
       process_signin
     rescue => e
       logger.error "Error authenticating via omniauth: #{e}"
+      # puts e
       omniauth_fail
     end
   end
@@ -119,8 +122,10 @@ class SessionsController < ApplicationController
   def omniauth_fail
     if params[:message].nil?
       redirect_to root_path, alert: I18n.t("omniauth_error")
+      logger.error I18n.t("omniauth_error")
     else
       redirect_to root_path, alert: I18n.t("omniauth_specific_error", error: params["message"])
+      logger.error I18n.t("omniauth_specific_error", error: params["message"])
     end
   end
 
@@ -212,6 +217,8 @@ class SessionsController < ApplicationController
     user = User.from_omniauth(@auth)
 
     logger.info "Support: Auth user #{user.email} is attempting to login."
+
+    
 
     # Add pending role if approval method and is a new user
     if approval_registration && !@user_exists

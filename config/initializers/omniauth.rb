@@ -17,6 +17,7 @@ Rails.application.config.omniauth_twitter = ENV['TWITTER_ID'].present? && ENV['T
 Rails.application.config.omniauth_google = ENV['GOOGLE_OAUTH2_ID'].present? && ENV['GOOGLE_OAUTH2_SECRET'].present?
 Rails.application.config.omniauth_office365 = ENV['OFFICE365_KEY'].present? &&
                                               ENV['OFFICE365_SECRET'].present?
+Rails.application.config.omniauth_cas = ENV['CAS'].present?
 
 SETUP_PROC = lambda do |env|
   OmniauthOptions.omniauth_options env
@@ -26,6 +27,24 @@ OmniAuth.config.logger = Rails.logger
 
 # Setup the Omniauth middleware.
 Rails.application.config.middleware.use OmniAuth::Builder do
+
+  
+
+      if Rails.configuration.omniauth_cas
+        Rails.application.config.providers << :cas
+  
+        provider :cas, host: ENV['CAS_HOST'] ,
+          port: ENV['CAS_PORT'],
+          ssl: true,
+          disable_ssl_verification: true,
+          uid_field: ENV['CAS_UID'],
+          name_key: ENV['CAS_NAME'], 
+          nickname_key: ENV['CAS_NICK'],
+          logout_url: ENV['CAS_LOGOUT'],
+          setup: SETUP_PROC
+
+      end
+  
   if Rails.configuration.omniauth_bn_launcher
     provider :bn_launcher, client_id: ENV['CLIENT_ID'],
       client_secret: ENV['CLIENT_SECRET'],

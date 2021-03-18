@@ -1,0 +1,112 @@
+<%
+# BigBlueButton open source conferencing system - http://www.bigbluebutton.org/.
+# Copyright (c) 2018 BigBlueButton Inc. and by respective authors (see below).
+# This program is free software; you can redistribute it and/or modify it under the
+# terms of the GNU Lesser General Public License as published by the Free Software
+# Foundation; either version 3.0 of the License, or (at your option) any later
+# version.
+#
+# BigBlueButton is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
+# You should have received a copy of the GNU Lesser General Public License along
+# with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
+%>
+<style>
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.well blockquote {
+  border-color: #ddd;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+.well-lg {
+  padding: 24px;
+  border-radius: 6px;
+}
+.well-sm {
+  padding: 9px;
+  border-radius: 3px;
+}
+</style>
+
+<div class="container pt-5">
+  <div class="row">
+    <ul>
+      <li><a href="#1">Wstęp</a></li>
+      <li><a href="#2">Tworzenie konta i logowanie</a></li>
+      <li><a href="#3">Pokoje</a></li>
+      <li><a href="#4">Pełna dokumentacja (eng)</a></li>
+    </ul>
+  </div>
+  <hr>
+  <div class="row" id="1">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h3>Wstęp</h3></div>
+      <div class="panel-body">System wideokonferencji zapewnia:<br>
+        <ul><li>Logowanie się za pomocą Centralnego Punktu Logowania, konta Office365 lub konta utworzonego ręcznie</li>
+        <li>Domyślny pokój wideokonferencyjny ze stałym adresem URL</li>
+        <li>Możliwość tworzenia wielu spersonalizowanych pokoi wideokonferencyjnych</li>
+        <li>Interfejs do przeglądania i zarządzania nagraniami</li></ul>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="2">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h3>Tworzenie konta i logowanie</h3></div>
+      <div class="panel-body">System zapewnia pełne zarządzanie kontami. Wspiera logowanie kontami:<br>
+        <ul><li>Centralnego Punktu Logowania</li>
+        <li>Office365</li>
+        <li>utworzonymi ręcznie</li></ul>
+        Aby utworzoyć konto ręcznie kliknij na przycisk 'Zarejestruj' w prawym górnym rogu ekranu. Nastepnie wypełnij formularz i kliknij przycisk 'Zarejestruj'. <br>
+        I to już!<br><br>
+        Aby się zalogować kliknij na przycisk 'Zaloguj' w prawym górnym rogu. Wybierz interesujący Cię typ autoryzacji lub podaj login i hasło a następnie kliknij przycisk 'Zaloguj'.<br>
+        Po zalogowaniu się zobaczysz swój główny ekran systemu wideokonferencji.<br>
+        <center><img src="images/2.png" width="50%" /></center> <br>
+        <div class="well">Wskazówka: Aby zmienić swoje konto kliknij na swój login w prawym górnym rogu i z menu wybierz 'Profil'.<br></div> 
+      </div>
+  </div>
+  <div class="row" id="3">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h3>Pokoje</h3></div>
+      <div class="panel-body">System wideokonferencji opiera się na koncepcji pokoi. Pokój dla użytkownika to sesja systemu, którą posiada. <br>
+      Użytkownik może zmieniać ustawienia pokoju według swoich preferencji, otwierać i zamykać swój pokój, zapraszać innych użytkowników, śledzić to, co się dzieje w środku i wiele innych.<br><br>
+      
+      
+      <h4>Tworzenie pokoju</h4>
+      W momencie utworzenia Twojego konta system automatycznie wygenerował dla Ciebie 'Pokój Domowy'. Jest to Twój prywatny pokój, który nigdy nie zniknie.<br>
+      Jesli chcesz utworzyć nowy pokój, na przykład do prowadzenia zajęć, kliknij przycisk 'Stwórz pokój'. Wprowadź nazwę pokoju, jeśli chcesz to wygeneruj kod dostępu, spersonalizuj
+        go poprzez wybranie odpowiednich ustawień i kliknij przycisk 'Stwórz pokój'. Automatycznie zostaniesz przeniesiony do nowo utworzonego pokoju, gdzie dostepny bedzie link do tego pokoju, który możesz rozesłać. <br>
+      Jeśli chcesz zmienić ustawienia pokoju to kliknij na 'trzy kropki' znajdujące się koło jego nazwy. <br><br>
+
+      <h4>Pokój publiczny czy prywatny</h4>
+      Jeżeli nie ustawisz kodu dostępu do pokoju, to pokój będzie miał status Publiczny. Nie oznacza to jednak, że każdy będzie mógł wejść, ponieważ musisz udostępnić link do pokoju.<br>
+      W momencie, gdy ustawisz kod dostępu, prócz udostępnienia linku do pokoju musisz również udostępnić kod dostępu.<br><br>
+
+      <h4>Zaproszenie do pokoju</h4>
+      Aby zaprosić kogoś do swojego pokoju wystarczy wysłać mu link, który znajdziemy na stronie danego pokoju. Jeśli odbiorca nie ma konta w systemie zostanie poproszony o podanie imienia, jeśli zaś ma konto użyte zostanie imię z systemu.<br><br>
+      
+      <h4>Udostępnienie pokoju</h4>
+      Aby udostępnić pokój osobie, która logowała się już do systemu, kliknij na menu akcji pokoju ('trzy kropki') a następnie wybierz 'Manage access'.<br>
+        <center><img src="https://docs.bigbluebutton.org/images/greenlight/room_shared_access.png" width="50%" /></center> <br><br>
+        Wybierz z listy użytkownika (lub wyszukaj po nazwie), któremu pokój udostepnić. Po wybraniu wszystkich uzytkowników kliknij 'Save Changes'.<br><br>
+
+      
+      </div>
+    </div>
+  </div>
+  <div class="row" id="4">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h3>Pełna dokumentacja (eng)</h3></div>
+      <div class="panel-body">Obszerniejsza dokumentacja (w języku angielskim) znajduje się <a href="https://docs.bigbluebutton.org/greenlight/gl-overview.html" target="_blank">pod tym linkiem.</a><br><br>
+      </div>
+    </div>
+  </div>
+</div>

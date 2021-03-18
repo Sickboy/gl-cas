@@ -127,7 +127,7 @@ pl_PL:
         uid: ID użytkownika
         username: Nazwa użytkownika
       title: Zarządzaj użytkownikami
-  add_to_google_calendar: "Dodaj do Kalendarza Google"
+  add_to_google_calendar: "Kalendarz Google"
   bigbluebutton: BigBlueButton
   bigbluebutton_exception: "Ups, wystąpił błąd podczas rozpoczynania spotkania!"
   cancel: Anuluj
@@ -255,7 +255,7 @@ pl_PL:
       invite:
         info: "Zostałeś zaproszony do własnej przestrzeni osobistej przez %{name}"
         signup_info: "Aby zarejestrować się za pomocą swojego e-maila, kliknij przycisk poniżej i postępuj zgodnie z instrukcjami."
-        signup_link: Zapisz się
+        signup_link: Zarejestruj
         signup:
           info: "Użytkownik, który został zaproszony, zapisał się do korzystania z Greenlight."
           admins_link: Odwiedź stronę organizacji
@@ -465,7 +465,7 @@ pl_PL:
   signup:
     password_confirm: Potwierdzenie hasła
     subtitle: Załóż konto
-    title: Zapisz się
+    title: Zarejestruj 
     with: "Zapisz się korzystając z %{provider}"
   terms:
     accept: "Akceptuję %{href}"

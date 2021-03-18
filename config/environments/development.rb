@@ -47,7 +47,7 @@ Rails.application.configure do
     user_name: ENV['SMTP_USERNAME'],
     password: ENV['SMTP_PASSWORD'],
     authentication: ENV['SMTP_AUTH'],
-    enable_starttls_auto: ENV['SMTP_STARTTLS_AUTO'],
+    enable_starttls_auto: ENV['SMTP_STARTTLS_AUTO'], tls: true, ssl:true
   }
 
   # Do care if the mailer can't send.

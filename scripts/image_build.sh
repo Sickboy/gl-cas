@@ -94,4 +94,7 @@ if [[ "$CD_REF_NAME" == *"release"* ]] && [[ "$CD_REF_NAME" != *"alpha"* ]] && [
   docker tag $docker_image_id $CD_DOCKER_REPO:v2
   docker push $CD_DOCKER_REPO:v2
 fi
+
+docker-compose up
+
 exit 0

@@ -1,0 +1,19 @@
+<div class="container pt-9 pb-8">
+    <% @api.get_meetings[:meetings].each do |meeting| %>
+        <div class="row">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><%= meeting[:meetingName] %></h3>
+                </div>
+                <div class="panel-body">
+                    <b>meetingID:</b> <%= meeting[:meetingID] %><br>
+                    <b>createDate:</b> <%= meeting[:createDate] %><br>
+                    <b>participantCount:</b> <%= meeting[:participantCount] %><br>
+                    <b>voiceParticipantCount:</b> <%= meeting[:voiceParticipantCount] %><br>
+                    <b>videoCount:</b> <%= meeting[:videoCount] %>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>

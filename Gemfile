@@ -38,6 +38,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 
+gem 'redis-rails'
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
@@ -46,6 +48,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 # Authentication.
 gem 'omniauth'
+gem 'omniauth-cas'
 gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-bn-office365', git: 'https://github.com/blindsidenetworks/omniauth-bn-office365.git', tag: '0.1.0'
@@ -75,6 +78,7 @@ gem 'redcarpet'
 gem 'cancancan', '~> 2.0'
 
 group :production do
+  gem 'sqlite3', '~> 1.3.6'
   # Use a postgres database in production.
   gem 'pg', '~> 0.18'
   gem 'sequel'
@@ -132,3 +136,4 @@ gem 'random_password'
 gem "recaptcha"
 
 gem 'i18n-language-mapping', '~> 0.1.0'
+

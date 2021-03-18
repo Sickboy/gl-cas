@@ -158,5 +158,8 @@ module Greenlight
 
     # Default admin password
     config.admin_password_default = ENV['ADMIN_PASSWORD'] || 'administrator'
+
+    #redis
+    config.cache_store = :redis_store, 'redis://redis:6379/0/cache', { expires_in: 90.minutes }
   end
 end

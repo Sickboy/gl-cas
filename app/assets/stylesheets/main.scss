@@ -111,6 +111,17 @@
   }
 }
 
+.customBtn-cas {
+  @extend .customBtn;
+  background: #004ba6;
+
+  .customBtn-image {
+    background: #ffffff image-url("umk.png") no-repeat left top;
+    background-size: 18px 18px;
+    padding:10px 10px 10px 10px;
+  }
+}
+
 .customBtn-twitter {
   @extend .customBtn;
   background: #1da1f2;
